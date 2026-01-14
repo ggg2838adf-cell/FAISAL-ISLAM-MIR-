@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Official Message - General Secretary PSAJK</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root {
-            --primary: #1a4d2e; /* Royal Green */
-            --accent: #d4af37;  /* Muted Gold */
-            --bg-paper: #fffcf5; /* Ivory Paper */
-            --text: #2c3e50;
+            /* NEW THEME: High Contrast & Vibrant */
+            --primary: #003366; /* Deep Royal Blue (Authority) */
+            --accent: #d4af37;  /* Metallic Gold (Excellence) */
+            --bg-body: #f4f6f8; /* Light Grey background for page */
+            --bg-card: #ffffff; /* Pure White for reading area */
+            --text-main: #2c3e50; /* Dark Grey for text */
+            --text-light: #546e7a;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Cormorant Garamond', serif;
-            background-color: #f0f2f5;
-            background-image: radial-gradient(#d4af37 1px, transparent 1px);
-            background-size: 30px 30px;
+            font-family: 'Merriweather', serif; /* Excellent for reading long text */
+            background-color: var(--bg-body);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 0;
-            color: var(--text);
-            line-height: 1.6;
+            color: var(--text-main);
+            line-height: 1.8; /* Increased line height for better visibility */
             overflow-x: hidden;
         }
 
@@ -39,7 +40,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #fdfbf7;
+            background: #ffffff;
             z-index: 9999;
             display: flex;
             justify-content: center;
@@ -50,14 +51,15 @@
         }
 
         .entrance-content {
-            animation: fadeIn 1s ease-out;
+            animation: fadeIn 0.8s ease-out;
             max-width: 600px;
             width: 100%;
-            border: 2px solid var(--accent);
-            padding: 40px 20px;
-            background: white;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            border-top: 5px solid var(--primary);
+            border-bottom: 5px solid var(--primary);
+            padding: 50px 20px;
+            background: #ffffff;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-radius: 4px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -65,94 +67,91 @@
 
         /* Photo Styles */
         .profile-photo-entrance {
-            width: 130px;
-            height: 130px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: top; /* Fixes cut off head */
+            object-position: top;
             border: 4px solid var(--accent);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            margin-bottom: 25px;
         }
 
-        /* UPDATED SIGNATURE PHOTO STYLE */
         .profile-photo-sig {
             width: 110px;
             height: 110px;
             border-radius: 50%;
             object-fit: cover;
-            /* This ensures the top of the photo (face) is shown, not the middle (chest) */
             object-position: top center; 
             border: 3px solid var(--accent);
             margin-bottom: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .org-title-entrance {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            color: #555;
-            margin-bottom: 20px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 30px;
             text-transform: uppercase;
+            font-weight: 700;
         }
 
         .official-entrance-btn {
             background: var(--primary);
             color: white;
-            border: 1px solid var(--primary);
-            padding: 25px 30px;
+            border: none;
+            padding: 20px 30px;
             font-family: 'Montserrat', sans-serif;
             font-size: 1rem;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 6px;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(26, 77, 46, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 51, 102, 0.3);
             width: 100%;
             max-width: 450px;
             line-height: 1.6;
             text-transform: uppercase;
             letter-spacing: 1px;
-            position: relative;
         }
 
         .official-entrance-btn:hover {
-            background: #143d24;
+            background: #002244; /* Darker blue on hover */
             transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(26, 77, 46, 0.4);
         }
 
         .click-instruction {
-            font-size: 0.8rem;
-            color: var(--accent);
+            font-size: 0.85rem;
+            color: #ffcc00; /* Bright Yellow for visibility against Blue */
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 700;
             letter-spacing: 2px;
             animation: pulseText 1.5s infinite;
         }
 
         .name-highlight {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: white;
             display: block;
-            margin: 5px 0;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            border-bottom: 1px solid rgba(255,255,255,0.3);
+            margin: 8px 0;
             padding: 5px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
         }
 
         .role-highlight {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
-            color: var(--accent);
+            color: #e0e0e0;
         }
 
         @keyframes pulseText {
-            0% { opacity: 0.6; }
+            0% { opacity: 0.7; }
             50% { opacity: 1; }
-            100% { opacity: 0.6; }
+            100% { opacity: 0.7; }
         }
 
         /* --- MAIN SCROLL STYLES --- */
@@ -164,20 +163,20 @@
         }
 
         .scroll-container {
-            background: var(--bg-paper);
+            background: var(--bg-card);
             width: 100%;
             max-width: 850px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             position: relative;
-            border-radius: 4px;
+            border-radius: 8px;
             overflow: hidden;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #e1e4e8;
             opacity: 0; 
             transform: translateY(30px);
         }
 
         .top-bar {
-            height: 10px;
+            height: 12px;
             background: var(--primary);
             border-bottom: 4px solid var(--accent);
         }
@@ -189,67 +188,77 @@
         .header {
             text-align: center;
             margin-bottom: 50px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+            border-bottom: 2px solid #f0f0f0;
             padding-bottom: 30px;
         }
 
         .org-name {
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            color: #666;
-            margin-bottom: 10px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
         .main-title {
-            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
             color: var(--primary);
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 10px;
-            line-height: 1.1;
+            line-height: 1.2;
         }
 
         .sub-title {
+            font-family: 'Merriweather', serif;
             font-style: italic;
             color: var(--accent);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            font-weight: 600;
         }
 
         .message-body {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
+            color: #333; /* Pure dark grey for max visibility */
             text-align: justify;
         }
 
         .intro-text {
             margin-bottom: 30px;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--primary);
         }
 
+        /* Special Sections */
         .special-section {
-            margin: 25px 0;
-            padding-left: 20px;
-            border-left: 4px solid var(--accent);
+            margin: 30px 0;
+            padding: 20px 25px;
+            border-left: 5px solid var(--accent);
+            background-color: #f9fbfd; /* Very subtle blue tint */
+            border-radius: 0 8px 8px 0;
             opacity: 0; 
             transform: translateY(20px);
         }
 
         .section-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 0.95rem;
+            font-weight: 700;
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             display: block;
         }
 
         .closing-text {
-            margin-top: 40px;
+            margin-top: 50px;
             text-align: center;
             font-style: italic;
             color: #555;
+            font-weight: 600;
         }
 
         .signature-block {
@@ -261,18 +270,19 @@
         }
 
         .sig-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-family: 'Merriweather', serif;
+            font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
         }
 
         .sig-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            color: #555;
-            margin-top: 5px;
+            color: #666;
+            margin-top: 4px;
+            font-weight: 600;
         }
 
         .watermark-logo {
@@ -281,45 +291,48 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 300px;
-            color: rgba(26, 77, 46, 0.03);
+            color: rgba(0, 51, 102, 0.03); /* Subtle blue watermark */
             pointer-events: none;
             z-index: 0;
         }
 
         .share-btn {
             display: block;
-            margin: 40px auto 0 auto;
-            background: transparent;
+            margin: 50px auto 0 auto;
+            background: white;
             border: 2px solid var(--primary);
             color: var(--primary);
-            padding: 10px 30px;
+            padding: 12px 35px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             cursor: pointer;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-weight: 600;
+            border-radius: 50px;
         }
         .share-btn:hover { background: var(--primary); color: white; }
 
-        .animate-scroll { animation: riseUp 1s ease-out forwards; }
+        .animate-scroll { animation: riseUp 0.8s ease-out forwards; }
         .animate-section { animation: riseUp 0.8s ease-out forwards; }
         
         @keyframes fadeIn { to { opacity: 1; } }
         @keyframes riseUp { to { opacity: 1; transform: translateY(0); } }
 
-        .delay-1 { animation-delay: 0.3s; }
-        .delay-2 { animation-delay: 0.6s; }
-        .delay-3 { animation-delay: 0.9s; }
-        .delay-4 { animation-delay: 1.2s; }
-        .delay-5 { animation-delay: 1.5s; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1.0s; }
 
         @media (max-width: 600px) {
-            .inner-padding { padding: 40px 25px; }
-            .main-title { font-size: 2rem; }
-            .message-body { font-size: 1.15rem; text-align: left; }
+            .inner-padding { padding: 40px 20px; }
+            .main-title { font-size: 1.8rem; }
+            .message-body { font-size: 1.1rem; text-align: left; }
             .signature-block { align-items: center; text-align: center; margin-top: 40px; }
-            .official-entrance-btn { padding: 20px 20px; font-size: 0.9rem; }
+            .official-entrance-btn { padding: 20px 15px; }
+            .special-section { padding: 15px; }
         }
     </style>
 </head>
@@ -330,7 +343,7 @@
             <img src="https://i.postimg.cc/Lsw59wxG/IMG-20260114-WA0008.jpg" 
                  alt="Faisal Islam Mir" class="profile-photo-entrance">
                  
-            <h2 class="org-title-entrance">Private Schools Association J&K</h2>
+            <h2 class="org-title-entrance">Private Schools Association Jammu and Kashmir (PSAJK)</h2>
             
             <button id="open-letter-btn" class="official-entrance-btn">
                 <span class="click-instruction">▼ CLICK HERE TO READ ▼</span>
@@ -344,11 +357,11 @@
     <div class="scroll-wrapper" id="main-content" style="display: none;">
         <div class="scroll-container" id="digital-scroll">
             <div class="top-bar"></div>
-            <i class="fas fa-book-open watermark-logo"></i>
+            <i class="fas fa-university watermark-logo"></i>
             
             <div class="inner-padding">
                 <div class="header">
-                    <div class="org-name">Jammu & Kashmir Private Schools Association</div>
+                    <div class="org-name">Private Schools Association Jammu and Kashmir (PSAJK)</div>
                     <h1 class="main-title">Message on JKBOSE Results</h1>
                     <div class="sub-title">Class X & XII Session 2025</div>
                 </div>
@@ -381,7 +394,7 @@
 
                     <div class="special-section delay-5" style="border-left-color: var(--primary);">
                         <span class="section-title">Our Commitment</span>
-                        The Jammu & Kashmir Private Schools Association remains committed to working collectively with school leadership, educators, parents, and students to strengthen quality education, ethical practices, and holistic development across Jammu & Kashmir.
+                        The Private Schools Association Jammu and Kashmir (PSAJK) remains committed to working collectively with school leadership, educators, parents, and students to strengthen quality education, ethical practices, and holistic development across Jammu & Kashmir.
                     </div>
 
                     <p class="closing-text">
@@ -396,7 +409,7 @@
                          
                     <div class="sig-name">Faisal Islam Mir</div>
                     <div class="sig-title">General Secretary</div>
-                    <div class="sig-title">Jammu & Kashmir Private Schools Association (PSAJK)</div>
+                    <div class="sig-title">Private Schools Association Jammu and Kashmir (PSAJK)</div>
                 </div>
 
                 <button class="share-btn" onclick="sharePage()">Share Message <i class="fas fa-share-square"></i></button>
