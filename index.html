@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Message - General Secretary PSAJK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1a4d2e; /* Royal Green */
+            --accent: #d4af37;  /* Muted Gold */
+            --bg-paper: #fffcf5; /* Ivory Paper */
+            --text: #2c3e50;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #f0f2f5;
+            background-image: radial-gradient(#d4af37 1px, transparent 1px);
+            background-size: 30px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- ENTRANCE SCREEN STYLES --- */
+        .entrance-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fdfbf7;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .entrance-content {
+            animation: fadeIn 1s ease-out;
+            max-width: 600px;
+            width: 100%;
+            border: 2px solid var(--accent);
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Photo Styles */
+        .profile-photo-entrance {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile-photo-sig {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .org-title-entrance {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color: #555;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .official-entrance-btn {
+            background: var(--primary);
+            color: white;
+            border: 1px solid var(--primary);
+            padding: 25px 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(26, 77, 46, 0.3);
+            width: 100%;
+            max-width: 450px;
+            line-height: 1.6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .official-entrance-btn:hover {
+            background: #143d24;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(26, 77, 46, 0.4);
+        }
+
+        .click-instruction {
+            font-size: 0.8rem;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            animation: pulseText 1.5s infinite;
+        }
+
+        .name-highlight {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            display: block;
+            margin: 5px 0;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding: 5px 0;
+        }
+
+        .role-highlight {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        @keyframes pulseText {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        /* --- MAIN SCROLL STYLES --- */
+        .scroll-wrapper {
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .scroll-container {
+            background: var(--bg-paper);
+            width: 100%;
+            max-width: 850px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            opacity: 0; 
+            transform: translateY(30px);
+        }
+
+        .top-bar {
+            height: 10px;
+            background: var(--primary);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .inner-padding {
+            padding: 60px 50px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+            padding-bottom: 30px;
+        }
+
+        .org-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .sub-title {
+            font-style: italic;
+            color: var(--accent);
+            font-size: 1.4rem;
+        }
+
+        .message-body {
+            font-size: 1.3rem;
+            text-align: justify;
+        }
+
+        .intro-text {
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .special-section {
+            margin: 25px 0;
+            padding-left: 20px;
+            border-left: 4px solid var(--accent);
+            opacity: 0; 
+            transform: translateY(20px);
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .closing-text {
+            margin-top: 40px;
+            text-align: center;
+            font-style: italic;
+            color: #555;
+        }
+
+        .signature-block {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        .sig-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .sig-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .watermark-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 300px;
+            color: rgba(26, 77, 46, 0.03);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .share-btn {
+            display: block;
+            margin: 40px auto 0 auto;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 10px 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .share-btn:hover { background: var(--primary); color: white; }
+
+        .animate-scroll { animation: riseUp 1s ease-out forwards; }
+        .animate-section { animation: riseUp 0.8s ease-out forwards; }
+        
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes riseUp { to { opacity: 1; transform: translateY(0); } }
+
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+        .delay-3 { animation-delay: 0.9s; }
+        .delay-4 { animation-delay: 1.2s; }
+        .delay-5 { animation-delay: 1.5s; }
+
+        @media (max-width: 600px) {
+            .inner-padding { padding: 40px 25px; }
+            .main-title { font-size: 2rem; }
+            .message-body { font-size: 1.15rem; text-align: left; }
+            .signature-block { align-items: center; text-align: center; margin-top: 40px; }
+            .official-entrance-btn { padding: 20px 20px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="entrance-screen" class="entrance-overlay">
+        <div class="entrance-content">
+            <img src="https://i.postimg.cc/Lsw59wxG/IMG-20260114-WA0008.jpg" 
+                 alt="Faisal Islam Mir" class="profile-photo-entrance">
+                 
+            <h2 class="org-title-entrance">Private Schools Association J&K</h2>
+            
+            <button id="open-letter-btn" class="official-entrance-btn">
+                <span class="click-instruction">▼ CLICK HERE TO READ ▼</span>
+                A Special Message from <br>
+                <span class="name-highlight">FAISAL ISLAM MIR</span>
+                <span class="role-highlight">General Secretary PSAJK</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="scroll-wrapper" id="main-content" style="display: none;">
+        <div class="scroll-container" id="digital-scroll">
+            <div class="top-bar"></div>
+            <i class="fas fa-book-open watermark-logo"></i>
+            
+            <div class="inner-padding">
+                <div class="header">
+                    <div class="org-name">Jammu & Kashmir Private Schools Association</div>
+                    <h1 class="main-title">Message on JKBOSE Results</h1>
+                    <div class="sub-title">Class X & XII Session 2025</div>
+                </div>
+
+                <div class="message-body">
+                    
+                    <p class="intro-text">
+                        On the announcement of the JKBOSE Class X and XII results, I extend my sincere congratulations to all those who have been part of this academic journey and contributed to the outcomes achieved this year.
+                    </p>
+
+                    <div class="special-section delay-1">
+                        <span class="section-title">To the Heads of Schools</span>
+                        I wish to particularly acknowledge your leadership and responsibility in steering institutions with vision and stability. Your role in maintaining academic standards, supporting faculty, and ensuring a healthy learning environment forms the foundation upon which educational success is built.
+                    </div>
+
+                    <div class="special-section delay-2">
+                        <span class="section-title">To Our Dedicated Teachers</span>
+                        My appreciation goes to you, whose dedication, patience, and daily engagement with students transform curricula into meaningful learning. Your quiet perseverance and commitment continue to shape young minds and inspire confidence far beyond the classroom.
+                    </div>
+
+                    <div class="special-section delay-3">
+                        <span class="section-title">To the Students</span>
+                        These results mark an important milestone. For those who achieved their goals, may this success encourage humility. For those who faced setbacks, remember that growth is not defined by one examination; resilience and consistent effort will always open new paths forward.
+                    </div>
+
+                    <div class="special-section delay-4">
+                        <span class="section-title">To the Parents</span>
+                        I recognize your indispensable role. Your trust, encouragement, and sacrifices provide students with strength and stability. Your partnership with schools remains vital to a child’s overall development.
+                    </div>
+
+                    <div class="special-section delay-5" style="border-left-color: var(--primary);">
+                        <span class="section-title">Our Commitment</span>
+                        The Jammu & Kashmir Private Schools Association remains committed to working collectively with school leadership, educators, parents, and students to strengthen quality education, ethical practices, and holistic development across Jammu & Kashmir.
+                    </div>
+
+                    <p class="closing-text">
+                        I extend my best wishes to all students for their future endeavours and to the entire education community for continued progress and success.
+                    </p>
+
+                </div>
+
+                <div class="signature-block">
+                    <img src="https://i.postimg.cc/Lsw59wxG/IMG-20260114-WA0008.jpg" 
+                         alt="Faisal Islam Mir" class="profile-photo-sig">
+                         
+                    <div class="sig-name">Faisal Islam Mir</div>
+                    <div class="sig-title">General Secretary</div>
+                    <div class="sig-title">Jammu & Kashmir Private Schools Association (PSAJK)</div>
+                </div>
+
+                <button class="share-btn" onclick="sharePage()">Share Message <i class="fas fa-share-square"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Entrance Logic
+        document.getElementById('open-letter-btn').addEventListener('click', function() {
+            var entrance = document.getElementById('entrance-screen');
+            entrance.style.transition = 'opacity 0.6s ease';
+            entrance.style.opacity = '0';
+            
+            setTimeout(function() {
+                entrance.style.display = 'none';
+                
+                var content = document.getElementById('main-content');
+                content.style.display = 'flex';
+                
+                var scroll = document.getElementById('digital-scroll');
+                scroll.classList.add('animate-scroll');
+
+                var sections = document.querySelectorAll('.special-section');
+                sections.forEach(function(sec) {
+                    sec.classList.add('animate-section');
+                });
+            }, 600);
+        });
+
+        // Share Logic
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Message from General Secretary PSAJK',
+                    text: 'Message on JKBOSE Class X & XII Results 2025',
+                    url: window.location.href,
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert("Link copied to clipboard!");
+            }
+        }
+    </script>
+</body>
+                      </html>
+
