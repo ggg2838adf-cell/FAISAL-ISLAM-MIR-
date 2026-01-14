@@ -74,14 +74,20 @@
             margin-bottom: 20px;
         }
 
-        .profile-photo-sig {
+                .profile-photo-sig {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
+            /* Ensures the face is centered, helpful if the image isn't perfectly square */
+            object-position: center top; 
             border: 3px solid var(--accent);
+            /* This new line pushes the photo down so it's not cut off */
+            margin-top: 15px;
             margin-bottom: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                }
+        
         }
 
         .org-title-entrance {
