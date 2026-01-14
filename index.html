@@ -69,25 +69,23 @@
             height: 130px;
             border-radius: 50%;
             object-fit: cover;
+            object-position: top; /* Fixes cut off head */
             border: 4px solid var(--accent);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
 
-                .profile-photo-sig {
-            width: 100px;
-            height: 100px;
+        /* UPDATED SIGNATURE PHOTO STYLE */
+        .profile-photo-sig {
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             object-fit: cover;
-            /* Ensures the face is centered, helpful if the image isn't perfectly square */
-            object-position: center top; 
+            /* This ensures the top of the photo (face) is shown, not the middle (chest) */
+            object-position: top center; 
             border: 3px solid var(--accent);
-            /* This new line pushes the photo down so it's not cut off */
-            margin-top: 15px;
             margin-bottom: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-                }
-        
         }
 
         .org-title-entrance {
@@ -444,5 +442,4 @@
         }
     </script>
 </body>
-                      </html>
-
+</html>
